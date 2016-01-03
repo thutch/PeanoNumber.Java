@@ -30,13 +30,25 @@ public abstract class PeanoNumber {
 	}
 	
 	public PeanoNumber addPeanoNumber(PeanoNumber aPeanoNumber){
-		PeanoNumber subtotal = this.pred.addPeanoNumber(aPeanoNumber);
+		PeanoNumber subtotal = this.getPred().addPeanoNumber(aPeanoNumber);
 		return subtotal.getSucc();
 	}
 	
 	public PeanoNumber subtractPeanoNumber(PeanoNumber aPeanoNumber){
-		PeanoNumber result = getPred().subtractPeanoNumber(aPeanoNumber);
+		PeanoNumber result = getSucc().subtractPeanoNumber(aPeanoNumber);
 		return result.getPred();
+	}
+	
+	public PeanoNumber multiply(PeanoNumber aPeanoNumber){
+		
+		PeanoNumber subtotal = aPeanoNumber;
+		PeanoNumber pred = getPred();
+		while(pred.isZero() == false){
+			subtotal = subtotal.addPeanoNumber(aPeanoNumber);
+			pred = pred.getPred();
+		};
+		
+		return subtotal;
 	}
 	
 	public boolean isZero(){

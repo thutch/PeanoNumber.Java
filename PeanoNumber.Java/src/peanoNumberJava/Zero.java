@@ -7,6 +7,14 @@ public class Zero extends PeanoNumber {
 		return aPeanoNumber;
 	}
 	
+	public PeanoNumber subtractPeanoNumber(PeanoNumber aPeanoNumber){
+		return aPeanoNumber;
+	}
+	
+	public PeanoNumber multiply(PeanoNumber aPeanoNumber){
+		return this;
+	}
+	
 	public boolean isZero(){
 		return true;
 	}
