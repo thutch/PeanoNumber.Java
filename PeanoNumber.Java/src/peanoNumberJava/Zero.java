@@ -2,7 +2,7 @@ package peanoNumberJava;
 
 public class Zero extends PeanoNumber {
 
-	public PeanoNumber addPeanoNumber(PeanoNumber aPeanoNumber)
+	public PeanoNumber add(PeanoNumber aPeanoNumber)
 	{
 		return aPeanoNumber;
 	}

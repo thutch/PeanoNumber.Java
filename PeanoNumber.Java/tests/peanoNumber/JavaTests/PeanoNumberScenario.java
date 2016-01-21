@@ -1,7 +1,11 @@
 package peanoNumber.JavaTests;
 
 import peanoNumberJava.PeanoNumber;
-
+/**
+ * 
+ * @author thutch
+ *
+ */
 public class PeanoNumberScenario extends ScenarioBase {
 	
 	protected PeanoNumber ClassUnderTest;

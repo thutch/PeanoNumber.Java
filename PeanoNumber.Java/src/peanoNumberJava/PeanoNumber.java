@@ -29,8 +29,8 @@ public abstract class PeanoNumber {
 		return of(this);
 	}
 	
-	public PeanoNumber addPeanoNumber(PeanoNumber aPeanoNumber){
-		PeanoNumber subtotal = this.getPred().addPeanoNumber(aPeanoNumber);
+	public PeanoNumber add(PeanoNumber aPeanoNumber){
+		PeanoNumber subtotal = this.getPred().add(aPeanoNumber);
 		return subtotal.getSucc();
 	}
 	
@@ -44,7 +44,7 @@ public abstract class PeanoNumber {
 		PeanoNumber subtotal = aPeanoNumber;
 		PeanoNumber pred = getPred();
 		while(pred.isZero() == false){
-			subtotal = subtotal.addPeanoNumber(aPeanoNumber);
+			subtotal = subtotal.add(aPeanoNumber);
 			pred = pred.getPred();
 		};
 		

@@ -17,7 +17,7 @@ public class When_adding_one_to_a_peano_number extends PeanoNumberScenario {
 	}
 	
 	protected void becauseOf(){
-		result = ClassUnderTest.addPeanoNumber(addend);
+		result = ClassUnderTest.add(addend);
 	}
 	
 	@Test
